@@ -25,6 +25,45 @@ export const Button = styled.button<Props>`
     height: 24px;
   }
 
+  &::before {
+    width: 12px;
+    height: 12px;
+
+    position: absolute;
+
+    left: -17px;
+    top: calc(50% - 6px);
+
+    background-color: var(--white);
+    border-radius: 50%;
+
+    content: '';
+    display: ${(props) => (props.hasNotifications ? 'block' : 'none')};
+  }
+
+  &::after {
+    background-color: var(--notification);
+    width: auto;
+    height: 16px;
+
+    padding: 0 4px;
+
+    position: absolute;
+    bottom: -4px;
+    right: -4px;
+
+    border-radius: 12px;
+    border: 4px solid var(--quaternary);
+    text-align: right;
+    font-size: 13px;
+    font-weight: bold;
+    color: var(--white);
+
+  content: '${(props) => props.mentions}';
+    display: ${(props) =>
+      props.mentions && props.mentions > 0 ? 'block' : 'none'}
+  }
+
   transition: border-radius 0.2s, background-color 0.2s;
 
   &.active,
