@@ -19,4 +19,18 @@ export const Button = styled.button<Props>`
 
   position: relative;
   cursor: pointer;
+
+  > img {
+    width: 24px;
+    height: 24px;
+  }
+
+  transition: border-radius 0.2s, background-color 0.2s;
+
+  &.active,
+  &:hover {
+    border-radius: 16px;
+    background-color: ${(props) =>
+      props.isHome ? 'var(--rocketseat)' : 'var(--discord)'};
+  }
 `;
