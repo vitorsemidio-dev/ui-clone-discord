@@ -31,10 +31,41 @@ export const Container = styled.div`
       color: var(--white);
     }
   }
+
+  svg + svg {
+    margin-left: 5px;
+  }
 `;
 
-export const HashTagIcon = styled.div``;
+export const HashTagIcon = styled(FaHashtag)`
+  width: 20px;
+  height: 20px;
 
-export const InviteIcon = styled.div``;
+  color: var(--symbol);
+`;
 
-export const SettingsIcon = styled.div``;
+export const InviteIcon = styled(FaUserPlus)`
+  width: 16px;
+  height: 16px;
+
+  color: var(--symbol);
+  cursor: pointer;
+
+  transition: color 0.2s;
+  &:hover {
+    color: var(--white);
+  }
+`;
+
+export const SettingsIcon = styled(FaCog)`
+  width: 16px;
+  height: 16px;
+
+  color: var(--symbol);
+  cursor: pointer;
+
+  transition: color 0.2s;
+  &:hover {
+    color: var(--white);
+  }
+`;
