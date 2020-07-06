@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { FaChevronDown as ExpandMore } from 'react-icons/fa';
 
 export const Container = styled.div`
   display: flex;
@@ -19,4 +20,11 @@ export const Title = styled.h1`
   color: var(--white);
 `;
 
-export const ExpandIcon = styled.div``;
+export const ExpandIcon = styled(ExpandMore)`
+  width: 20px;
+  height: 20px;
+
+  color: var(--white);
+
+  cursor: pointer;
+`;
