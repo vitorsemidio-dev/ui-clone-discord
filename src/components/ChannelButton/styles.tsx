@@ -19,6 +19,15 @@ export const Container = styled.div`
     align-items: center;
   }
 
+  > div.actions {
+    svg + svg {
+      margin-left: 5px;
+    }
+    svg {
+      display: none;
+    }
+  }
+
   > div span {
     margin-left: 5px;
     color: var(--senary);
@@ -30,10 +39,10 @@ export const Container = styled.div`
     > div span {
       color: var(--white);
     }
-  }
 
-  svg + svg {
-    margin-left: 5px;
+    > div.actions svg {
+      display: block;
+    }
   }
 `;
 
