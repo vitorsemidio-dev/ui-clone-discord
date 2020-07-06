@@ -1,12 +1,43 @@
 import styled from 'styled-components';
+import { FaHashtag } from 'react-icons/fa';
 
-export const Container = styled.div``;
+export const Container = styled.div`
+  grid-area: CI;
 
-export const HashTagIcon = styled.div``;
+  display: flex;
+  align-items: center;
 
-export const Title = styled.div``;
+  padding: 0 17px;
+  background-color: var(--primary);
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 0px 0px;
 
-export const Separator = styled.div``;
+  z-index: 2;
+`;
 
-export const Description = styled.div``;
+export const HashTagIcon = styled(FaHashtag)`
+  width: 24px;
+  height: 24px;
 
+  color: var(--symbol);
+`;
+
+export const Title = styled.div`
+  margin-left: 9px;
+
+  color: var(--white);
+  font-size: 16px;
+  font-weight: bold;
+`;
+
+export const Separator = styled.div`
+  height: 24px;
+  width: 1px;
+  background-color: var(--white);
+  opacity: 0.2;
+  margin: 0 13px;
+`;
+
+export const Description = styled.div`
+  font-size: 15px;
+  color: var(--gray);
+`;
